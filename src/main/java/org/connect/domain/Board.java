@@ -79,4 +79,12 @@ public class Board {
         }
         return false;
     }
+
+    public Board copy() {
+        Board copy = new Board();
+        for (int row = 0; row < ROWS; row++) {
+            System.arraycopy(this.grid[row], 0, copy.grid[row], 0, COLUMNS);
+        }
+        return copy;
+    }
 }
